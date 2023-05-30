@@ -1,0 +1,17 @@
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
+
+solution : 
+
+var findMaxConsecutiveOnes = function(nums) {
+   let maxcount = 0;
+    let currentcount = 0;
+    for(let i=0;i<nums.length;i++){
+        if(nums[i]===1){
+            currentcount++;
+            maxcount = Math.max(maxcount,currentcount);
+        }else{
+            currentcount = 0;
+        }        
+    }
+     return maxcount;
+};
